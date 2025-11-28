@@ -73,10 +73,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry):
 
     async_track_time_interval(hass, hub.async_update, scan_interval)
 
-    for component in PLATFORMS:
-        hass.async_create_task(
-            hass.config_entries.async_forward_entry_setup(entry, component)
-        )
+    await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True
 
 

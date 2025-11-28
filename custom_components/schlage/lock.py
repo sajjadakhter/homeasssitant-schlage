@@ -2,10 +2,7 @@ import logging
 from typing import Any, Dict, Optional
 
 
-from homeassistant.helpers.entity import Entity
-
 from homeassistant.components.lock import LockEntity
-from homeassistant.const import STATE_LOCKED, STATE_UNLOCKED
 from homeassistant.config_entries import ConfigEntry
 
 from homeassistant.const import CONF_ID, CONF_TYPE
